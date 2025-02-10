@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cyberharcèlement - CyberHero</title>
+  <link href="../dist/output.css" rel="stylesheet">
+  <style>
+    /* Animation de flottement pour l'image */
+    @keyframes float {
+      0% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(-15px);
+      }
+      100% {
+        transform: translateY(0);
+      }
+    }
+    .floating-image {
+      animation: float 3s ease-in-out infinite;
+    }
+  </style>
+</head>
+<body class="bg-gray-100">
+  <!-- Header -->
+  <header class="bg-gradient-to-r from-indigo-400 to-violet-700 text-white shadow-lg">
+    <div class="container mx-auto flex items-center justify-between py-4 px-6">
+      <div class="flex items-center space-x-3">
+        <img src="/public/LogoBlanc.png" alt="CyberHero Logo" class="h-10 w-10">
+        <a href="index.html" class="hover:text-gray-300 text-2xl font-bold">CyberHero</a>
+      </div>
+      <nav class="space-x-4">
+        <a href="index.html" class="hover:text-gray-300">Accueil</a>
+        <a href="quiz.html" class="hover:text-gray-300">Quiz</a>
+        <a href="faq.html" class="hover:text-gray-300">FAQ</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- FAQ Page -->
+  <main>
+    <section class="relative bg-gradient-to-r from-indigo-400 to-violet-700 text-white min-h-screen flex items-center">
+      <div class="container mx-auto flex flex-col md:flex-row items-center space-y-6 md:space-y-0 md:space-x-8 px-6">
+        <div class="text-center md:text-left">
+          <h1 class="text-6xl font-bold mb-4">Foire Aux Questions (FAQ)</h1>
+          <p class="text-lg">Découvrez des réponses aux questions fréquentes sur la cybersécurité, le phishing, les fuites de données et le cyberharcèlement. Apprenez des astuces simples pour protéger vos informations et naviguer en toute sécurité en ligne.</p>
+        </div>
+        <!-- Ajout de la classe floating-image pour animer l'image -->
+        <img src="/public/FAQ.png" alt="Illustration cybersécurité" class="w-full md:w-1/2 animate-fade-in floating-image">
+      </div>
+    </section>
+  
+  
+      
+      <div class="max-w-3xl mx-auto space-y-6">
+        <!-- Question 1 -->
+        <div class="bg-gray-50 p-6 rounded-lg shadow-lg hover:shadow-2xl transition duration-300 ease-in-out">
+          <button class="w-full text-left text-2xl font-semibold text-indigo-700 focus:outline-none" onclick="toggleAnswer(1)">
+            Qu'est-ce que le phishing ?
+          </button>
+          <p id="answer-1" class="text-lg text-gray-600 mt-4 hidden">
+            Le phishing est une méthode utilisée par des cybercriminels pour obtenir des informations sensibles, telles que des mots de passe et des numéros de carte bancaire, en se faisant passer pour des entités légitimes.
+          </p>
+        </div>
+
+        <!-- Question 2 -->
+        <div class="bg-gray-50 p-6 rounded-lg shadow-lg hover:shadow-2xl transition duration-300 ease-in-out">
+          <button class="w-full text-left text-2xl font-semibold text-indigo-700 focus:outline-none" onclick="toggleAnswer(2)">
+            Comment protéger mes données personnelles ?
+          </button>
+          <p id="answer-2" class="text-lg text-gray-600 mt-4 hidden">
+            Vous pouvez protéger vos données en utilisant des mots de passe forts, en activant l'authentification à deux facteurs, et en restant vigilant face aux tentatives de phishing et de fraude en ligne.
+          </p>
+        </div>
+
+        <!-- Question 3 -->
+        <div class="bg-gray-50 p-6 rounded-lg shadow-lg hover:shadow-2xl transition duration-300 ease-in-out">
+          <button class="w-full text-left text-2xl font-semibold text-indigo-700 focus:outline-none" onclick="toggleAnswer(3)">
+            Que faire en cas de fuite de données ?
+          </button>
+          <p id="answer-3" class="text-lg text-gray-600 mt-4 hidden">
+            En cas de fuite de données, vous devez immédiatement changer vos mots de passe, informer les entreprises concernées, et vérifier si des informations sensibles ont été exposées.
+          </p>
+        </div>
+
+        <!-- Question 4 -->
+        <div class="bg-gray-50 p-6 rounded-lg shadow-lg hover:shadow-2xl transition duration-300 ease-in-out">
+          <button class="w-full text-left text-2xl font-semibold text-indigo-700 focus:outline-none" onclick="toggleAnswer(4)">
+            Comment savoir si mon email est une tentative de phishing ?
+          </button>
+          <p id="answer-4" class="text-lg text-gray-600 mt-4 hidden">
+            Méfiez-vous des emails provenant d'adresses inconnues, de liens suspects, de fautes d'orthographe, ou d'une pression pour agir rapidement. Si vous avez des doutes, ne cliquez pas sur les liens et ne téléchargez pas les pièces jointes.
+          </p>
+        </div>
+
+        <!-- Question 5 -->
+        <div class="bg-gray-50 p-6 rounded-lg shadow-lg hover:shadow-2xl transition duration-300 ease-in-out">
+          <button class="w-full text-left text-2xl font-semibold text-indigo-700 focus:outline-none" onclick="toggleAnswer(5)">
+            Qu'est-ce que l'authentification à deux facteurs ?
+          </button>
+          <p id="answer-5" class="text-lg text-gray-600 mt-4 hidden">
+            L'authentification à deux facteurs (2FA) est une méthode de sécurité qui nécessite deux formes de vérification : un mot de passe et un code envoyé sur votre téléphone ou votre email.
+          </p>
+        </div>
+
+        <!-- Question 6 -->
+        <div class="bg-gray-50 p-6 rounded-lg shadow-lg hover:shadow-2xl transition duration-300 ease-in-out">
+          <button class="w-full text-left text-2xl font-semibold text-indigo-700 focus:outline-none" onclick="toggleAnswer(6)">
+            Pourquoi faut-il se méfier des réseaux Wi-Fi publics ?
+          </button>
+          <p id="answer-6" class="text-lg text-gray-600 mt-4 hidden">
+            Les réseaux Wi-Fi publics sont souvent non sécurisés, ce qui permet aux cybercriminels d'intercepter les données échangées entre votre appareil et le réseau, comme vos mots de passe ou vos informations bancaires.
+          </p>
+        </div>
+
+        <!-- Question 7 -->
+        <div class="bg-gray-50 p-6 rounded-lg shadow-lg hover:shadow-2xl transition duration-300 ease-in-out">
+          <button class="w-full text-left text-2xl font-semibold text-indigo-700 focus:outline-none" onclick="toggleAnswer(7)">
+            Qu'est-ce qu'un ransomware ?
+          </button>
+          <p id="answer-7" class="text-lg text-gray-600 mt-4 hidden">
+            Un ransomware est un type de malware qui bloque l'accès à vos fichiers ou à votre système et exige un paiement pour les débloquer. Il est souvent diffusé via des emails de phishing ou des sites web compromis.
+          </p>
+        </div>
+
+        <!-- Question 8 -->
+        <div class="bg-gray-50 p-6 rounded-lg shadow-lg hover:shadow-2xl transition duration-300 ease-in-out">
+          <button class="w-full text-left text-2xl font-semibold text-indigo-700 focus:outline-none" onclick="toggleAnswer(8)">
+            Comment vérifier si un site web est sécurisé ?
+          </button>
+          <p id="answer-8" class="text-lg text-gray-600 mt-4 hidden">
+            Vérifiez que l'URL commence par "https://" et que le cadenas apparaît avant l'URL. Cela signifie que la connexion est sécurisée et que les informations échangées sont cryptées.
+          </p>
+        </div>
+
+        <!-- Question 9 -->
+        <div class="bg-gray-50 p-6 rounded-lg shadow-lg hover:shadow-2xl transition duration-300 ease-in-out">
+          <button class="w-full text-left text-2xl font-semibold text-indigo-700 focus:outline-none" onclick="toggleAnswer(9)">
+            Pourquoi faut-il mettre à jour régulièrement ses logiciels ?
+          </button>
+          <p id="answer-9" class="text-lg text-gray-600 mt-4 hidden">
+            Les mises à jour de logiciels corrigent des vulnérabilités de sécurité et ajoutent des fonctionnalités de protection pour éviter que des pirates n'exploitent des failles dans les programmes que vous utilisez.
+          </p>
+        </div>
+
+        <!-- Question 10 -->
+        <div class="bg-gray-50 p-6 rounded-lg shadow-lg hover:shadow-2xl transition duration-300 ease-in-out">
+          <button class="w-full text-left text-2xl font-semibold text-indigo-700 focus:outline-none" onclick="toggleAnswer(10)">
+            Que faire si je suis victime de cyberharcèlement ?
+          </button>
+          <p id="answer-10" class="text-lg text-gray-600 mt-4 hidden">
+            Si vous êtes victime de cyberharcèlement, il est important de signaler les abus aux autorités compétentes, de conserver les preuves (captures d'écran, messages) et de prendre des mesures pour sécuriser vos comptes en ligne.
+          </p>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-gradient-to-r from-indigo-400 to-violet-700 text-white py-6">
+    <div class="container mx-auto flex flex-col items-center justify-center space-y-4">
+      <div class="flex space-x-8">
+        <a href="index.html" class="hover:text-gray-300">Accueil</a>
+        <a href="phishing.html" class="hover:text-gray-300">Phishing</a>
+        <a href="Fuitedonne.html" class="hover:text-gray-300">Fuite de données</a>
+        <a href="Cyberharcelement.html" class="hover:text-gray-300">Cyber harcèlement</a>
+        <a href="quiz.html" class="hover:text-gray-300">Quiz</a>
+      </div>
+      <p class="text-center text-gray-200 mt-4">© 2025 CyberHero - Tous droits réservés</p>
+    </div>
+  </footer>
+
+  <script>
+    function toggleAnswer(questionNumber) {
+      const answer = document.getElementById(`answer-${questionNumber}`);
+      answer.classList.toggle('hidden');
+    }
+  </script>
+</body>
+</html>

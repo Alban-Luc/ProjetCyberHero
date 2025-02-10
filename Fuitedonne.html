@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fuite de Données - CyberHero</title>
+  <link href="../dist/output.css" rel="stylesheet">
+  <style>
+    /* Animation de flottement pour l'image */
+    @keyframes float {
+      0% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(-15px);
+      }
+      100% {
+        transform: translateY(0);
+      }
+    }
+    .floating-image {
+      animation: float 3s ease-in-out infinite;
+    }
+  </style>
+</head>
+<body class="bg-gray-100">
+  <!-- Header -->
+  <header class="bg-gradient-to-r from-indigo-400 to-violet-700 text-white shadow-lg">
+    <div class="container mx-auto flex items-center justify-between py-4 px-6">
+      <div class="flex items-center space-x-3">
+        <img src="/public/LogoBlanc.png" alt="CyberHero Logo" class="h-10 w-10">
+        <a href="index.html" class="hover:text-gray-300 text-2xl font-bold">CyberHero</a>
+      </div>
+      <nav class="space-x-4">
+        <a href="index.html" class="hover:text-gray-300">Accueil</a>
+        <a href="quiz.html" class="hover:text-gray-300">Quiz</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Page Fuite de Données -->
+  <main>
+    <!-- Introduction Section -->
+    <section class="relative bg-gradient-to-r from-indigo-400 to-violet-700 text-white min-h-screen flex items-center">
+      <div class="container mx-auto flex flex-col md:flex-row items-center space-y-6 md:space-y-0 md:space-x-8 px-6">
+        <div class="text-center md:text-left">
+          <h1 class="text-6xl font-bold mb-4">Fuite de Données : Protégez vos informations personnelles</h1>
+          <p class="text-lg">Une fuite de données peut exposer vos informations sensibles à des cybercriminels. Il est important de savoir comment les prévenir et réagir rapidement.</p>
+        </div>
+        <img src="/public/FuiteDonne.png" alt="Fuite de données Illustration" class="w-full md:w-1/2 animate-fade-in floating-image">
+      </div>
+    </section>
+
+    <!-- What is Data Breach Section -->
+    <section class="py-16 px-6 bg-white">
+      <div class="container mx-auto text-center">
+        <h2 class="text-3xl font-bold text-indigo-700 mb-6">Qu'est-ce qu'une Fuite de Données ?</h2>
+        <p class="text-lg text-gray-600 mb-4">Une fuite de données se produit lorsqu'une organisation perd le contrôle sur les informations sensibles, permettant ainsi leur divulgation non autorisée. Cela peut inclure des informations personnelles, financières ou professionnelles.</p>
+        <p class="text-lg text-gray-600">Ces fuites peuvent avoir des conséquences graves, allant du vol d'identité à la fraude financière. Les entreprises doivent être vigilantes et adopter des mesures strictes pour protéger les données des utilisateurs.</p>
+      </div>
+    </section>
+
+    <!-- How to Protect Yourself Section -->
+    <section class="py-16 px-6 bg-white">
+      <div class="container mx-auto text-center">
+        <h2 class="text-3xl font-bold text-indigo-700 mb-6">Comment vous protéger ?</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <!-- Card 1 -->
+          <div class="bg-white shadow-xl hover:shadow-2xl transform hover:scale-105 transition duration-300 ease-in-out p-6 rounded-lg">
+            <h3 class="text-2xl font-semibold text-indigo-700 mb-4">1. Utilisez des mots de passe forts</h3>
+            <p class="text-lg text-gray-600">Des mots de passe robustes, uniques et complexes peuvent réduire les risques de fuite de données en rendant plus difficile l'accès non autorisé à vos comptes.</p>
+          </div>
+          <!-- Card 2 -->
+          <div class="bg-white shadow-xl hover:shadow-2xl transform hover:scale-105 transition duration-300 ease-in-out p-6 rounded-lg">
+            <h3 class="text-2xl font-semibold text-indigo-700 mb-4">2. Activez l'authentification à deux facteurs</h3>
+            <p class="text-lg text-gray-600">L'authentification à deux facteurs (2FA) ajoute une couche de sécurité supplémentaire en exigeant un code de vérification en plus du mot de passe.</p>
+          </div>
+          <!-- Card 3 -->
+          <div class="bg-white shadow-xl hover:shadow-2xl transform hover:scale-105 transition duration-300 ease-in-out p-6 rounded-lg">
+            <h3 class="text-2xl font-semibold text-indigo-700 mb-4">3. Soyez vigilant aux emails suspects</h3>
+            <p class="text-lg text-gray-600">Évitez de cliquer sur des liens ou de télécharger des pièces jointes dans des emails non sollicités, car ils peuvent être utilisés pour accéder à vos informations personnelles.</p>
+          </div>
+          <!-- Card 4 -->
+          <div class="bg-white shadow-xl hover:shadow-2xl transform hover:scale-105 transition duration-300 ease-in-out p-6 rounded-lg">
+            <h3 class="text-2xl font-semibold text-indigo-700 mb-4">4. Mettez à jour régulièrement vos logiciels</h3>
+            <p class="text-lg text-gray-600">Les mises à jour régulières de vos systèmes d'exploitation et applications permettent de corriger les vulnérabilités de sécurité, réduisant ainsi les risques d'une fuite de données.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Conclusion Section -->
+    <section class="py-16 px-6 bg-gradient-to-r from-indigo-400 to-violet-700 text-white">
+      <div class="container mx-auto text-center">
+        <h2 class="text-3xl font-bold mb-6">Protégez vos Données dès maintenant</h2>
+        <p class="text-lg mb-4">Les fuites de données sont une menace croissante, mais vous pouvez prendre des mesures pour protéger vos informations personnelles. Soyez proactif pour garantir votre sécurité en ligne.</p>
+        <a href="quiz.html" class="bg-indigo-800 text-white py-2 px-6 rounded-full hover:bg-violet-500">Testez vos connaissances sur les Fuites de Données</a>
+      </div>
+    </section>
+
+    <!-- Video Section -->
+    <section class="py-16 px-6 bg-white">
+      <div class="container mx-auto text-center">
+        <h2 class="text-3xl font-bold text-indigo-700 mb-6">Regardez cette vidéo pour en savoir plus sur les Fuites de Données</h2>
+        <p class="text-lg text-gray-600 mb-6">Cette vidéo vous explique ce qu'est une fuite de données, comment elle peut se produire et quelles actions vous pouvez prendre pour minimiser les risques.</p>
+        <div class="relative pb-9/16 mb-4">
+          <video controls class="w-3/4 mx-auto rounded-lg shadow-lg">
+            <source src="/public/fuit.mp4" type="video/mp4">
+            Votre navigateur ne prend pas en charge la balise vidéo.
+          </video>
+        </div>
+      </div>
+    </section>
+  </main>
+
+    <!-- Footer -->
+    <footer class="bg-gradient-to-r from-indigo-400 to-violet-700 text-white py-6">
+      <div class="container mx-auto flex flex-col items-center justify-center space-y-4">
+        <div class="flex space-x-8">
+          <a href="index.html" class="hover:text-gray-300">Accueil</a>
+          <a href="phishing.html" class="hover:text-gray-300">Phishing</a>
+          <a href="Fuitedonne.html" class="hover:text-gray-300">Fuite de données</a>
+          <a href="Cyberharcelement.html" class="hover:text-gray-300">Cyber harcèlement</a>
+          <a href="quiz.html" class="hover:text-gray-300">Quiz</a>
+        </div>
+        <p class="text-center text-gray-200 mt-4">© 2025 CyberHero - Tous droits réservés</p>
+      </div>
+    </footer>
+</body>
+</html>

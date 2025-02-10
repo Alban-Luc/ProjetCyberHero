@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Phishing - CyberHero</title>
+  <link href="../dist/output.css" rel="stylesheet">
+  <style>
+    /* Animation de flottement pour l'image */
+    @keyframes float {
+      0% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(-15px);
+      }
+      100% {
+        transform: translateY(0);
+      }
+    }
+    .floating-image {
+      animation: float 3s ease-in-out infinite;
+    }
+  </style>
+</head>
+<body class="bg-gray-100">
+  <!-- Header -->
+  <header class="bg-gradient-to-r from-indigo-400 to-violet-700 text-white shadow-lg">
+    <div class="container mx-auto flex items-center justify-between py-4 px-6">
+      <div class="flex items-center space-x-3">
+        <img src="/public/LogoBlanc.png" alt="CyberHero Logo" class="h-10 w-10">
+        <a href="index.html" class="hover:text-gray-300 text-2xl font-bold">CyberHero</a>
+      </div>
+      <nav class="space-x-4">
+        <a href="index.html" class="hover:text-gray-300">Accueil</a>
+        <a href="quiz.html" class="hover:text-gray-300">Quiz</a>
+        <a href="faq.html" class="hover:text-gray-300">FAQ</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Page Quiz -->
+  <main>
+    <!-- Introduction Section -->
+    <section class="relative bg-gradient-to-r from-indigo-400 to-violet-700 text-white min-h-screen flex items-center">
+      <div class="container mx-auto flex flex-col md:flex-row items-center space-y-6 md:space-y-0 md:space-x-8 px-6">
+        <div class="text-center md:text-left">
+          <h1 class="text-6xl font-bold mb-4">Testez vos connaissances: Êtes-vous prêt à détecter les menaces en ligne ?</h1>
+          <p class="text-lg">Le quiz vous aide à évaluer votre capacité à repérer les menaces numériques et à protéger vos informations personnelles contre les arnaques en ligne.</p>
+        </div>
+        <img src="/public/Quiz.png" alt="Phishing Illustration" class="w-full md:w-1/2 animate-fade-in floating-image">
+      </div>
+    </section>
+
+    <style>
+
+
+        input[type="radio"]:checked + label {
+            background-color: #8e44ad;
+            color: #fff;
+            border-color: #8e44ad;
+        }
+
+        label {
+            cursor: pointer;
+            display: block;
+            padding: 12px;
+            border: 2px solid #8e44ad;
+            border-radius: 5px;
+            margin-bottom: 12px;
+            transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+        }
+
+        button {
+            background-color: #9b59b6;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            border: none;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #8e44ad;
+        }
+
+        footer {
+            background-color: #2c3e50;
+            color: #bdc3c7;
+        }
+
+        #password-strength {
+            margin-top: 10px;
+        }
+
+        #strength-bar {
+            height: 10px;
+            border-radius: 5px;
+        }
+
+        /* Responsive design */
+        @media (max-width: 768px) {
+            header .container {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            header h1 {
+                text-align: center;
+                margin-bottom: 10px;
+            }
+
+            nav ul {
+                flex-direction: column;
+                margin-top: 10px;
+            }
+
+            nav ul li {
+                margin-bottom: 8px;
+            }
+
+            main {
+                padding: 4px;
+            }
+
+            .max-w-2xl {
+                max-width: 100%;
+            }
+
+            .text-2xl {
+                font-size: 1.5rem;
+            }
+
+            .fade-in {
+                animation: fadeIn 1s ease-out;
+            }
+        }
+    </style>
+
+
+    <main class="container mx-auto px-4 py-8 fade-in">
+        <section>
+            <h2 class="text-2xl font-bold">Bienvenue dans Cyber-Hero</h2>
+            <p class="mt-2">Testez vos connaissances en cybersécurité à travers ce quiz. Répondez à chaque question pour vérifier vos compétences et obtenez des recommandations pour améliorer votre sécurité en ligne.</p>
+        </section>
+
+        <div id="quiz-container" class="bg-white bg-opacity-10 rounded-lg shadow-lg p-6 max-w-2xl mx-auto mt-8">
+
+            <!-- Debut Quiz Section -->
+            <!-- Question 1 -->
+            <div id="question1" class="fade-in">
+                <p class="text-lg font-semibold">1. Quel est le moyen le plus sûr de créer un mot de passe&nbsp;?</p>
+                <div class="mt-4">
+                    <input type="radio" id="q1a1" name="q1" value="0" hidden>
+                    <label for="q1a1">Utiliser votre date de naissance</label>
+
+                    <input type="radio" id="q1a2" name="q1" value="1" hidden>
+                    <label for="q1a2">Combiner des lettres, chiffres et symboles</label>
+
+                    <input type="radio" id="q1a3" name="q1" value="0" hidden>
+                    <label for="q1a3">Utiliser "123456" pour ne pas oublier</label>
+                </div>
+                <button onclick="nextQuestion('question1', 'question2')" class="mt-4">Suivant</button>
+            </div>
+
+            <!-- Question 2 -->
+            <div id="question2" class="hidden fade-in">
+                <p class="text-lg font-semibold">2. Que devez-vous faire si vous recevez un email suspect&nbsp;?</p>
+                <div class="mt-4">
+                    <input type="radio" id="q2a1" name="q2" value="1" hidden>
+                    <label for="q2a1">Ne pas cliquer et le signaler</label>
+
+                    <input type="radio" id="q2a2" name="q2" value="0" hidden>
+                    <label for="q2a2">Répondre pour vérifier l'expéditeur</label>
+
+                    <input type="radio" id="q2a3" name="q2" value="0" hidden>
+                    <label for="q2a3">Télécharger les pièces jointes</label>
+                </div>
+                <button onclick="nextQuestion('question2', 'question3')" class="mt-4">Suivant</button>
+            </div>
+
+            <!-- Question 3 -->
+            <div id="question3" class="hidden fade-in">
+                <p class="text-lg font-semibold">3. Pourquoi est-il important de mettre à jour vos logiciels&nbsp;?</p>
+                <div class="mt-4">
+                    <input type="radio" id="q3a1" name="q3" value="0" hidden>
+                    <label for="q3a1">Pour ajouter des fonctionnalités inutiles</label>
+
+                    <input type="radio" id="q3a2" name="q3" value="1" hidden>
+                    <label for="q3a2">Pour corriger des failles de sécurité</label>
+
+                    <input type="radio" id="q3a3" name="q3" value="0" hidden>
+                    <label for="q3a3">Pour réduire la vitesse de votre appareil</label>
+                </div>
+                <button onclick="submitQuiz()" class="mt-4">Soumettre</button>
+            </div>
+
+            <div id="result" class="hidden mt-6 text-center text-lg font-semibold"></div>
+        </div>
+        <!-- Fin Quiz Section -->
+
+        <!-- Jeu Vrai ou Faux - Cybersécurité -->
+<section id="true-false-game" class="mt-12">
+    <h2 class="text-2xl font-bold">Jeu: Vrai ou Faux sur la Cybersécurité</h2>
+    <p class="mt-2">Testez vos connaissances sur la cybersécurité en répondant à ces affirmations!</p>
+  
+    <div id="game-questions" class="bg-white bg-opacity-10 rounded-lg shadow-lg p-6 mt-6 text-center">
+      <p class="text-lg font-semibold" id="question">1. Les mots de passe simples sont suffisants pour sécuriser vos comptes.</p>
+  
+      <div class="mt-4">
+        <button onclick="checkAnswer(true)" class="px-6 py-2 bg-green-500 text-white rounded-lg hover:bg-green-600">Vrai</button>
+        <button onclick="checkAnswer(false)" class="px-6 py-2 bg-red-500 text-white rounded-lg hover:bg-red-600 ml-4">Faux</button>
+      </div>
+  
+      <div id="game-result" class="mt-6 text-lg font-semibold"></div>
+    </div>
+  </section>
+  
+  
+
+        <!-- Password Checker Section -->
+        <section id="password-checker" class="mt-12">
+            <h2 class="text-2xl font-bold">Vérifiez la sécurité de votre mot de passe</h2>
+            <p class="mt-2">Un mot de passe sécurisé est essentiel pour protéger vos informations personnelles. Testez votre mot de passe ci-dessous et découvrez comment l'améliorer.</p>
+            
+            <label for="password-input" class="block mt-4">Entrez votre mot de passe :</label>
+            <input type="password" id="password-input" class="w-full p-2 bg-white text-black border rounded mt-2" placeholder="Mot de passe" oninput="checkPasswordStrength()">
+            
+            <div id="password-strength" class="mt-4">
+                <p>Force du mot de passe : <span id="strength-text">Faible</span></p>
+                <div id="strength-bar" style="width: 50%; background-color: red;"></div>
+            </div>
+            
+            <p id="cracking-time" class="mt-2">Temps estimé pour cracker : 2 minutes</p>
+            
+            <p id="improvements" class="mt-2">Suggestions : Ajoutez des chiffres, des lettres majuscules, des symboles, etc.</p>
+
+            <p class="mt-4 text-blue-500"><a href="https://www.cybermalveillance.gouv.fr/tous-nos-contenus/bonnes-pratiques/mots-de-passe">En savoir plus sur la sécurité des mots de passe</a></p>
+        </section>
+        
+    </main>
+
+     <!-- Footer -->
+<footer class="bg-gradient-to-r from-indigo-400 to-violet-700 text-white py-6">
+  <div class="container mx-auto flex flex-col items-center justify-center space-y-4">
+    <div class="flex space-x-8">
+      <a href="index.html" class="hover:text-gray-300">Accueil</a>
+      <a href="phishing.html" class="hover:text-gray-300">Phishing</a>
+      <a href="Fuitedonne.html" class="hover:text-gray-300">Fuite de données</a>
+      <a href="Cyberharcelement.html" class="hover:text-gray-300">Cyber harcèlement</a>
+      <a href="quiz.html" class="hover:text-gray-300">Quiz</a>
+    </div>
+    <p class="text-center text-gray-200 mt-4">© 2025 CyberHero - Tous droits réservés</p>
+  </div>
+</footer>
+
+    <script>
+
+let currentQuestion = 0;
+  const questions = [
+    { question: "Les mots de passe simples sont suffisants pour sécuriser vos comptes.", answer: false },
+    { question: "Il est important de mettre à jour régulièrement ses logiciels pour éviter les failles de sécurité.", answer: true },
+    { question: "Cliquer sur des liens suspects dans les emails ne présente aucun danger.", answer: false },
+  ];
+  let score = 0;
+
+  function displayQuestion() {
+    if (currentQuestion < questions.length) {
+      document.getElementById('question').textContent = questions[currentQuestion].question;
+      document.getElementById('game-result').textContent = '';
+    } else {
+      endGame();
+    }
+  }
+
+  function checkAnswer(isTrue) {
+    if (isTrue === questions[currentQuestion].answer) {
+      score++;
+    }
+    currentQuestion++;
+    displayQuestion();
+  }
+
+  function endGame() {
+    const resultText = document.getElementById('game-result');
+    resultText.textContent = `Votre score: ${score} / ${questions.length}`;
+    resultText.style.color = score === questions.length ? 'green' : 'red';
+
+    if (score === questions.length) {
+      resultText.textContent += " - Excellent! Vous êtes un expert en cybersécurité!";
+    } else if (score === 0) {
+      resultText.textContent += " - Oups, il semble que vous ayez besoin de plus d'apprentissage.";
+    } else {
+      resultText.textContent += " - Bon travail, mais continuez à vous améliorer!";
+    }
+  }
+
+  // Initialisation du jeu
+  displayQuestion();
+        
+            const menuToggle = document.getElementById('menu-toggle');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        menuToggle.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
+        mobileMenu.classList.toggle('translate-y-[-100%]');
+        });
+
+        document.getElementById('menu-toggle').addEventListener('click', function () {
+            const mobileMenu = document.getElementById('mobile-menu');
+            mobileMenu.classList.toggle('hidden');
+            });
+
+        function nextQuestion(currentId, nextId) {
+            document.getElementById(currentId).classList.add('hidden');
+            document.getElementById(nextId).classList.remove('hidden');
+        }
+
+        function submitQuiz() {
+            let score = 0;
+            const answers = document.querySelectorAll('input[type="radio"]:checked');
+
+            answers.forEach(answer => {
+                score += parseInt(answer.value);
+            });
+
+            const result = document.getElementById('result');
+            result.classList.remove('hidden');
+            result.textContent = `Votre score : ${score} / 3`;
+
+            if (score === 3) {
+                result.style.color = '#8e44ad'; // Purple for top score
+                result.textContent += " - Excellent travail, vous êtes un Cyber-Héros !";
+            } else if (score === 2) {
+                result.style.color = '#e67e22'; // Amber for good start
+                result.textContent += " - Bon début, mais continuez à apprendre !";
+            } else {
+                result.style.color = '#e74c3c'; // Red for improvement
+                result.textContent += " - Attention, la cybersécurité est importante !";
+            }
+        }
+
+        function checkPasswordStrength() {
+            const password = document.getElementById('password-input').value;
+            const strengthText = document.getElementById('strength-text');
+            const strengthBar = document.getElementById('strength-bar');
+            const crackingTime = document.getElementById('cracking-time');
+            const improvements = document.getElementById('improvements');
+
+            let strength = 0;
+            let time = '';
+            let bgColor = 'red';
+
+            // Simple password strength checking logic
+            if (password.length >= 8) {
+                strength += 1;
+                bgColor = 'yellow';
+            }
+            if (/[A-Z]/.test(password)) {
+                strength += 1;
+            }
+            if (/[0-9]/.test(password)) {
+                strength += 1;
+            }
+            if (/[^A-Za-z0-9]/.test(password)) {
+                strength += 1;
+            }
+
+            if (strength === 0) {
+                strengthText.textContent = "Faible";
+                time = "Temps estimé pour cracker : 2 minutes";
+                strengthBar.style.width = '50%';
+            } else if (strength === 1) {
+                strengthText.textContent = "Moyenne";
+                time = "Temps estimé pour cracker : 1 heure";
+                strengthBar.style.width = '60%';
+                bgColor = 'orange';
+            } else if (strength === 2) {
+                strengthText.textContent = "Bonne";
+                time = "Temps estimé pour cracker : 1 jour";
+                strengthBar.style.width = '80%';
+                bgColor = 'green';
+            } else {
+                strengthText.textContent = "Très bonne";
+                time = "Temps estimé pour cracker : 1 million d'années";
+                strengthBar.style.width = '100%';
+                bgColor = 'green';
+            }
+
+            strengthBar.style.backgroundColor = bgColor;
+            crackingTime.textContent = time;
+
+            improvements.textContent = "Suggestions : Ajoutez des chiffres, des lettres majuscules, des symboles, etc.";
+        }
+
+        
+    </script>
+</body>
+</html>
