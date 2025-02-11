@@ -112,6 +112,55 @@
         margin: 0 auto; /* Centrer les images */
     }
 }
+
+/* Style de base pour le footer */
+.footer {
+  background: linear-gradient(to right, #4f46e5, #7c3aed); /* Dégradé indigo à violet */
+  color: white;
+  padding: 1.5rem 0;
+  text-align: center;
+}
+
+/* Conteneur pour centrer le contenu */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* Style des liens */
+.footer-links {
+  display: flex;
+  flex-wrap: wrap; /* Permet aux liens de passer à la ligne sur les petits écrans */
+  justify-content: center; /* Centre les liens horizontalement */
+  gap: 1rem; /* Espacement entre les liens */
+  margin-bottom: 1rem;
+}
+
+.footer-links a {
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+  color: #d1d5db; /* Couleur gris clair au survol */
+}
+
+/* Style du texte du footer */
+.footer-text {
+  color: #e5e7eb; /* Couleur gris clair */
+  margin-top: 1rem;
+  font-size: 0.875rem;
+}
+
+/* Responsive design pour les petits écrans */
+@media (max-width: 768px) {
+  .footer-links {
+    flex-direction: column; /* Affiche les liens en colonne sur les petits écrans */
+    gap: 0.5rem; /* Réduit l'espacement entre les liens */
+  }
+}
   </style>
 </head>
 <body class="bg-gray-100">
@@ -322,18 +371,18 @@
       
     </div>
     <!-- Footer -->
-<footer class="bg-gradient-to-r from-indigo-400 to-violet-700 text-white py-6">
-  <div class="container mx-auto flex flex-col items-center justify-center space-y-4">
-    <div class="flex space-x-8">
-      <a href="index.html" class="hover:text-gray-300">Accueil</a>
-      <a href="phishing.html" class="hover:text-gray-300">Phishing</a>
-      <a href="Fuitedonne.html" class="hover:text-gray-300">Fuite de données</a>
-      <a href="Cyberharcelement.html" class="hover:text-gray-300">Cyber harcèlement</a>
-      <a href="quiz.html" class="hover:text-gray-300">Quiz</a>
-    </div>
-    <p class="text-center text-gray-200 mt-4">© 2025 CyberHero - Tous droits réservés</p>
-  </div>
-</footer>
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-links">
+          <a href="index.html">Accueil</a>
+          <a href="phishing.html">Phishing</a>
+          <a href="Fuitedonne.html">Fuite de données</a>
+          <a href="Cyberharcelement.html">Cyber harcèlement</a>
+          <a href="quiz.html">Quiz</a>
+        </div>
+        <p class="footer-text">© 2025 CyberHero - Tous droits réservés</p>
+      </div>
+    </footer>
 
   </main>
 
